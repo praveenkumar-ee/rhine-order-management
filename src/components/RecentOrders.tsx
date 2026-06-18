@@ -3,7 +3,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 
 import type { Order } from '@/src/providers/warehouse/Types';
-import { ChevronRightIcon, OrdersBoxIcon } from './icons';
+import { ChevronRightIcon, OrdersBoxIcon } from './Icons';
 
 type RecentOrdersProps = {
   orders: Order[];

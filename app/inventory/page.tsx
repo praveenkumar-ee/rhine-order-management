@@ -11,7 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import { ArrowBackIcon } from '@/src/components/home/icons';
+import { ArrowBackIcon } from '@/src/components/Icons';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
 
 export default function InventoryPage() {

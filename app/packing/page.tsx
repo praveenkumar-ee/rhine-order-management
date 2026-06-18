@@ -12,7 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 
-import { ArrowBackIcon } from '@/src/components/home/icons';
+import { ArrowBackIcon } from '@/src/components/Icons';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
 import type { Inventory, Product } from '@/src/providers/warehouse/Types';
 import Loader from '@/src/components/Loader';

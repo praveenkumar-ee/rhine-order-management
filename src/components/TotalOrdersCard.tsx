@@ -2,7 +2,7 @@
 
 import { Box, Stack, Typography } from '@mui/material';
 
-import { TruckIcon } from './icons';
+import { TruckIcon } from './Icons';
 
 type TotalOrdersCardProps = {
   totalOrders: number;

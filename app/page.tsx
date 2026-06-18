@@ -2,7 +2,7 @@
 
 import { Box, Stack, Typography } from '@mui/material';
 
-import HomeDashboard from '@/src/components/home/HomeDashboard';
+import HomeDashboard from '@/src/components/HomeDashboard';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
 import Loader from '@/src/components/Loader';
 
