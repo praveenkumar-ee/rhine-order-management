@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Loader = styled.div`
+export const StyledLoader = styled.div`
   /* HTML: <div class="loader"></div> */
   width: 50px;
   aspect-ratio: 1;
@@ -28,3 +28,11 @@ export const Loader = styled.div`
     100%{transform: rotate(1turn)}
   }
 `;
+
+const Loader = ({ label }: { label?: string }) => {
+  return (
+    <StyledLoader aria-label={label} />
+  );
+};
+
+export default Loader;

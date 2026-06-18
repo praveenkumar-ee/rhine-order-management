@@ -8,6 +8,8 @@ const WarehouseContext = createContext<WarehouseContextProps>({
   inventories: [],
   products: [],
   isLoading: true,
+  shipOrder: () => {},
+  holdOrder: () => {},
 });
 
 export default WarehouseContext;

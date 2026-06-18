@@ -2,7 +2,14 @@
 
 import { useEffect, useState } from 'react';
 
-import { Order, Package, Inventory, Product, WarehouseProviderProps } from './Types';
+import {
+  Order,
+  Package,
+  Inventory,
+  Product,
+  ShipOrderItem,
+  WarehouseProviderProps,
+} from './Types';
 import WarehouseContext from './Context';
 
 const WarehouseProvider = ({ children }: WarehouseProviderProps) => {
@@ -53,6 +60,42 @@ const WarehouseProvider = ({ children }: WarehouseProviderProps) => {
     loadData();
   }, []);
 
+  const createOrder = (items: ShipOrderItem[], status: string) => {
+    const now = new Date().toISOString();
+    const orderId = crypto.randomUUID();
+
+    const newOrder: Order = {
+      id: orderId,
+      status,
+      createdAt: now,
+      updatedAt: now,
+    };
+
+    const newPackages: Package[] = items.map((item) => ({
+      id: crypto.randomUUID(),
+      orderId,
+      productId: item.productId,
+      quantity: item.quantity,
+    }));
+
+    setOrders((previous) => [...previous, newOrder]);
+    setPackages((previous) => [...previous, ...newPackages]);
+    setInventories((previous) =>
+      previous.map((inventory) => {
+        const packedItem = items.find((item) => item.productId === inventory.productId);
+        if (!packedItem) return inventory;
+
+        return {
+          ...inventory,
+          quantity: Math.max(0, inventory.quantity - packedItem.quantity),
+        };
+      }),
+    );
+  };
+
+  const shipOrder = (items: ShipOrderItem[]) => createOrder(items, 'shipped');
+  const holdOrder = (items: ShipOrderItem[]) => createOrder(items, 'hold');
+
   return (
     <WarehouseContext.Provider value={{
       orders,
@@ -60,6 +103,8 @@ const WarehouseProvider = ({ children }: WarehouseProviderProps) => {
       inventories,
       products,
       isLoading,
+      shipOrder,
+      holdOrder,
     }}>
       {children}
     </WarehouseContext.Provider>

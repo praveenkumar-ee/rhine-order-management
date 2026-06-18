@@ -4,7 +4,7 @@ import { Box, Stack, Typography } from '@mui/material';
 
 import HomeDashboard from '@/src/components/home/HomeDashboard';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
-import { Loader } from './style';
+import Loader from '@/src/components/Loader';
 
 export default function Home() {
   const { isLoading } = useWarehouse();
@@ -24,7 +24,7 @@ export default function Home() {
           <Typography variant="h3" sx={{ textAlign: 'center', bgcolor: 'primary.main', px: 4, py: 2, borderRadius: 2, fontWeight: 700, color: 'primary.contrastText' }}>
             R
           </Typography>
-          <Loader aria-label="Loading warehouse data" />
+          <Loader label="Loading warehouse data" />
           <Typography variant="h5" color="text.secondary" sx={{ textAlign: 'center' }}>
             Greetings! Loading Warehouse...
           </Typography>
