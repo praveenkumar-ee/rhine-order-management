@@ -1,0 +1,10 @@
+{
+  "orders": [
+    {
+      "id": "5244d5d8-62f4-46cc-8f87-b5fdbd7a34f2",
+      "status": "pending",
+      "createdAt": "2026-06-18T10:00:00.000Z",
+      "updatedAt": "2026-06-18T10:00:00.000Z"
+    }
+  ]
+}

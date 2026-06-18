@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": "3c8a61d5-fd08-41d3-98ca-76d33a3fd1cf",
+      "name": "Apple iPhone 15",
+      "description": "Apple iPhone 15 smartphone featuring a 6.1-inch Super Retina XDR display, A16 Bionic chip, 128GB storage, advanced dual-camera system with 48MP main sensor, Dynamic Island, USB-C connectivity, and all-day battery life.",
+      "price": 69999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Apple+iPhone+15"
+    },
+    {
+      "id": "0e3f5249-b5b7-4587-9f07-a67fd7dd8c15",
+      "name": "Apple 20W USB-C Power Adapter",
+      "description": "Official Apple 20W USB-C power adapter designed for fast charging compatible iPhone, iPad, and AirPods devices. Compact design ideal for travel and daily use.",
+      "price": 1899,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Apple+20W+Charger"
+    },
+    {
+      "id": "6a39e02b-4931-42ec-9781-ff0d7e6fd96a",
+      "name": "Logitech MX Master 3S",
+      "description": "Premium wireless productivity mouse featuring MagSpeed scrolling, customizable buttons, ergonomic design, USB-C charging, multi-device support, and up to 70 days of battery life.",
+      "price": 8999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=MX+Master+3S"
+    },
+    {
+      "id": "b6f5ec8a-f3f8-4ecf-86f4-f1e97078b840",
+      "name": "Dell 24-inch Full HD Monitor",
+      "description": "24-inch IPS monitor with Full HD 1920x1080 resolution, anti-glare display, ultra-thin bezels, HDMI connectivity, and eye-comfort technology for professional and home use.",
+      "price": 12999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Dell+Monitor"
+    },
+    {
+      "id": "88f7d766-48a0-4c9d-a0a6-fbcf1e50df77",
+      "name": "Samsung T7 Portable SSD 1TB",
+      "description": "High-speed portable solid-state drive with 1TB storage capacity, USB 3.2 Gen 2 support, transfer speeds up to 1050MB/s, compact metal body, and password protection.",
+      "price": 7999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Samsung+T7+SSD"
+    },
+    {
+      "id": "9f38c07f-c2af-4979-8846-c3efef4cb8db",
+      "name": "HP Wireless Keyboard",
+      "description": "Slim wireless keyboard with low-profile keys, Bluetooth connectivity, long-lasting battery life, spill-resistant design, and compatibility with Windows and macOS devices.",
+      "price": 1499,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=HP+Keyboard"
+    },
+    {
+      "id": "5d4796c4-9d34-48cf-82bc-dfb993bd5036",
+      "name": "Anker PowerCore 10000",
+      "description": "Compact 10000mAh portable power bank featuring high-speed charging technology, USB-C input, lightweight design, and enough capacity for multiple smartphone charges.",
+      "price": 2499,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Anker+Power+Bank"
+    },
+    {
+      "id": "e7d0c9cf-6e8f-4bc6-8fd9-61a3fdc2ef1f",
+      "name": "Sony WH-CH520 Wireless Headphones",
+      "description": "Bluetooth over-ear headphones with up to 50 hours battery life, built-in microphone, customizable EQ settings, lightweight design, and clear hands-free calling.",
+      "price": 4499,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Sony+Headphones"
+    },
+    {
+      "id": "8c13cb26-0ca9-4c1a-80cb-3e17d9f6c2e8",
+      "name": "Amazon Echo Dot",
+      "description": "Smart speaker powered by Alexa featuring voice control, smart home integration, music streaming support, weather updates, reminders, and compact modern design.",
+      "price": 3499,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Echo+Dot"
+    },
+    {
+      "id": "7d20d2cf-2f62-42df-b6a4-489f03a9776f",
+      "name": "Apple Watch SE GPS",
+      "description": "Advanced smartwatch featuring fitness tracking, heart rate monitoring, sleep tracking, crash detection, water resistance, and seamless iPhone integration.",
+      "price": 24999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Apple+Watch+SE"
+    },
+    {
+      "id": "abf7e22c-38d6-41f5-b2c0-598a6520fef7",
+      "name": "Xiaomi Smart Band 8",
+      "description": "Fitness band with AMOLED display, heart rate monitoring, sleep analysis, workout tracking, water resistance, and up to 16 days battery life.",
+      "price": 3299,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Mi+Band+8"
+    },
+    {
+      "id": "ff56f0f2-bde4-4dd0-a6bc-cd84d45e6a7b",
+      "name": "JBL Flip 6 Bluetooth Speaker",
+      "description": "Portable waterproof Bluetooth speaker delivering powerful JBL Original Pro Sound, USB-C charging, IP67 rating, and up to 12 hours of playback.",
+      "price": 8999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=JBL+Flip+6"
+    },
+    {
+      "id": "d17db59d-c8a0-4bdb-9a43-469d9e9b53c4",
+      "name": "Canon PIXMA All-in-One Printer",
+      "description": "Wireless color inkjet printer supporting printing, scanning, and copying with mobile printing support and high-quality photo output.",
+      "price": 5999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Canon+Printer"
+    },
+    {
+      "id": "cd17e9c6-7f95-4b7d-93cf-0f5afac6a9c8",
+      "name": "TP-Link AC1200 WiFi Router",
+      "description": "Dual-band wireless router providing stable high-speed internet connectivity, parental controls, guest network support, and easy setup management.",
+      "price": 2799,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=TP-Link+Router"
+    },
+    {
+      "id": "f70b9f95-6444-4a22-bf66-a37c2e7361e1",
+      "name": "Lenovo ThinkPad Laptop Backpack",
+      "description": "Durable laptop backpack with padded compartments, water-resistant exterior, multiple storage pockets, and ergonomic shoulder straps.",
+      "price": 1799,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=ThinkPad+Backpack"
+    },
+    {
+      "id": "2fcf6420-5b0e-4d1d-9f76-8d6f7ca42f66",
+      "name": "USB-C Fast Charging Cable",
+      "description": "1-meter braided USB-C cable supporting fast charging, high-speed data transfer, reinforced connectors, and universal device compatibility.",
+      "price": 399,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=USB-C+Cable"
+    },
+    {
+      "id": "1e2f3d4a-8f7b-4e2f-b4f3-90b05f71e95f",
+      "name": "MacBook Air M3",
+      "description": "Apple MacBook Air featuring the M3 chip, 13.6-inch Liquid Retina display, 8GB unified memory, 256GB SSD storage, and all-day battery life.",
+      "price": 114900,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=MacBook+Air+M3"
+    },
+    {
+      "id": "c0e76c29-6071-4d63-b61e-8f99e98f0f4f",
+      "name": "Samsung Galaxy S25",
+      "description": "Flagship Android smartphone with advanced AI features, AMOLED display, premium camera system, fast charging support, and 256GB storage.",
+      "price": 79999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Galaxy+S25"
+    },
+    {
+      "id": "fcbcc8d5-df4c-4a4b-b2bb-c9f21f8ea98f",
+      "name": "Nintendo Switch OLED",
+      "description": "Hybrid gaming console featuring a vibrant OLED display, detachable Joy-Con controllers, TV docking support, and a vast game library.",
+      "price": 29999,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=Nintendo+Switch"
+    },
+    {
+      "id": "53c5e873-0a0f-4f6f-8d7e-7434b0cdb77f",
+      "name": "WD Elements 2TB External HDD",
+      "description": "Reliable portable hard drive with 2TB storage capacity, USB 3.0 connectivity, plug-and-play functionality, and compact lightweight design.",
+      "price": 5499,
+      "image": "https://placehold.co/600x600/f8f9fa/212529?text=WD+Elements+2TB"
+    }
+  ]
+}
