@@ -1,0 +1,49 @@
+import { SvgIcon, type SvgIconProps } from '@mui/material';
+
+export function BellIcon(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 24 24" {...props}>
+      <path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.6-6.86V3a1.4 1.4 0 1 0-2.8 0v1.14A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z" />
+    </SvgIcon>
+  );
+}
+
+export function ChevronRightIcon(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 24 24" {...props}>
+      <path d="M9.29 6.71a1 1 0 0 0 0 1.41L13.17 12l-3.88 3.88a1 1 0 1 0 1.42 1.41l4.59-4.59a1 1 0 0 0 0-1.41l-4.59-4.59a1 1 0 0 0-1.42 0Z" />
+    </SvgIcon>
+  );
+}
+
+export function InventoryIcon(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 24 24" {...props}>
+      <path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8Zm2-5h12a1 1 0 0 1 1 1v2H5V4a1 1 0 0 1 1-1Zm4 7h2v2H8v-2Zm0 4h2v2H8v-2Zm4-4h2v2h-2v-2Zm0 4h2v2h-2v-2Z" />
+    </SvgIcon>
+  );
+}
+
+export function PackageIcon(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 24 24" {...props}>
+      <path d="M12 2 2 7l10 5 10-5-10-5Zm0 7.24L4.21 7 12 3.76 19.79 7 12 9.24ZM4 9.27V16l8 4.46L20 16V9.27l-8 4-8-4Z" />
+    </SvgIcon>
+  );
+}
+
+export function TruckIcon(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 24 24" {...props}>
+      <path d="M3 6h11v9H3V6Zm12 2h3.5L20 11.5V15h-2a2.5 2.5 0 1 1-5 0H9a2.5 2.5 0 1 1-5 0H3v-2h1.05A2.5 2.5 0 0 1 6.5 9H15V8Zm-3.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm9 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+    </SvgIcon>
+  );
+}
+
+export function OrdersBoxIcon(props: SvgIconProps) {
+  return (
+    <SvgIcon viewBox="0 0 24 24" {...props}>
+      <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 4v10h14V8H5Zm3 2h8v2H8v-2Zm0 4h5v2H8v-2Z" />
+    </SvgIcon>
+  );
+}

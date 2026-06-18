@@ -2,6 +2,7 @@
 
 import { Box, Stack, Typography } from '@mui/material';
 
+import HomeDashboard from '@/src/components/home/HomeDashboard';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
 import { Loader } from './style';
 
@@ -20,14 +21,17 @@ export default function Home() {
         }}
       >
         <Stack spacing={2} sx={{ alignItems: 'center', padding: 2 }}>
+          <Typography variant="h3" sx={{ textAlign: 'center', bgcolor: 'primary.main', px: 4, py: 2, borderRadius: 2, fontWeight: 700, color: 'primary.contrastText' }}>
+            R
+          </Typography>
           <Loader aria-label="Loading warehouse data" />
           <Typography variant="h5" color="text.secondary" sx={{ textAlign: 'center' }}>
-            Morning from Rhine. I&lsquo;m loading the warehouse data...
+            Greetings! Loading Warehouse...
           </Typography>
         </Stack>
       </Box>
     );
   }
 
-  return null;
+  return <HomeDashboard />;
 }

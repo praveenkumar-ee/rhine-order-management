@@ -5,7 +5,7 @@ export const Loader = styled.div`
   width: 50px;
   aspect-ratio: 1;
   display: grid;
-  color: #002984;
+  color: #99121D;
   background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
   -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
   border-radius: 50%;
