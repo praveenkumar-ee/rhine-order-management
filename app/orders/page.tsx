@@ -7,34 +7,14 @@ import { Box, Chip, IconButton, Stack, Typography } from '@mui/material';
 import Loader from '@/src/components/Loader';
 import { ArrowBackIcon } from '@/src/components/Icons';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
-import type { Package, Product } from '@/src/providers/warehouse/Types';
 import { formatOrderId, formatPrice } from '@/src/utils/formatter';
+import { getOrderDetails } from '@/src/utils/generator';
 
 const statusConfig: Record<string, { label: string; bgcolor: string; color: string }> = {
   shipped: { label: 'Shipped', bgcolor: '#E8F5E9', color: '#2E7D32' },
   hold: { label: 'On Hold', bgcolor: '#FFEBEE', color: '#C62828' },
   packing: { label: 'Packing', bgcolor: '#FFF3E0', color: '#E65100' },
 };
-
-function getOrderDetails(orderId: string, packages: Package[], products: Product[]) {
-  const orderPackages = packages.filter((pkg) => pkg.orderId === orderId);
-
-  const productDescriptions = orderPackages.map((pkg) => {
-    const product = products.find((entry) => entry.id === pkg.productId);
-    const name = product?.name ?? 'Unknown product';
-    return `${name} * ${pkg.quantity}`;
-  });
-
-  const total = orderPackages.reduce((sum, pkg) => {
-    const product = products.find((entry) => entry.id === pkg.productId);
-    return sum + (product?.price ?? 0) * pkg.quantity;
-  }, 0);
-
-  return {
-    productDescriptions: productDescriptions.join('|'),
-    total,
-  };
-}
 
 export default function OrdersPage() {
   const { orders, packages, products, isLoading } = useWarehouse();
@@ -58,9 +38,13 @@ export default function OrdersPage() {
           justifyContent: 'center',
           bgcolor: 'background.default',
           minHeight: 320,
+          flexDirection: 'column',
         }}
       >
         <Loader label="Loading orders..." />
+        <Typography variant="h5" color="text.secondary" sx={{ textAlign: 'center' }}>
+          Loading orders...
+        </Typography>
       </Box>
     );
   }

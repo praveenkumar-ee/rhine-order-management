@@ -1,4 +1,4 @@
-import { Product, Inventory } from '../providers/warehouse/Types';
+import { Product, Inventory, Package } from '../providers/warehouse/Types';
 
 export type PackingItem = {
   id: string;
@@ -29,4 +29,24 @@ export function generatePackingOrder(products: Product[], inventories: Inventory
     quantity: Math.min(inventory.quantity, Math.random() < 0.5 ? 1 : 2),
     confirmed: false,
   }));
+}
+
+export function getOrderDetails(orderId: string, packages: Package[], products: Product[]) {
+  const orderPackages = packages.filter((pkg) => pkg.orderId === orderId);
+
+  const productDescriptions = orderPackages.map((pkg) => {
+    const product = products.find((entry) => entry.id === pkg.productId);
+    const name = product?.name ?? 'Unknown product';
+    return `${name} * ${pkg.quantity}`;
+  });
+
+  const total = orderPackages.reduce((sum, pkg) => {
+    const product = products.find((entry) => entry.id === pkg.productId);
+    return sum + (product?.price ?? 0) * pkg.quantity;
+  }, 0);
+
+  return {
+    productDescriptions: productDescriptions.join('|'),
+    total,
+  };
 }

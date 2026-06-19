@@ -13,9 +13,10 @@ import {
 
 import { ArrowBackIcon } from '@/src/components/Icons';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
+import Loader from '@/src/components/Loader';
 
 export default function InventoryPage() {
-  const { inventories, products } = useWarehouse();
+  const { inventories, products, isLoading } = useWarehouse();
   const [search, setSearch] = useState('');
 
   const inventoryItems = useMemo(
@@ -37,6 +38,28 @@ export default function InventoryPage() {
         }),
     [inventories, products, search],
   );
+
+  if (isLoading) {
+    return (
+      <Box
+        component="main"
+        sx={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          bgcolor: 'background.default',
+          minHeight: 320,
+          flexDirection: 'column',
+        }}
+      >
+        <Loader label="Loading inventory..." />
+        <Typography variant="h5" color="text.secondary" sx={{ textAlign: 'center' }}>
+          Loading inventory...
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <Box
