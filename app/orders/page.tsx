@@ -8,18 +8,7 @@ import Loader from '@/src/components/Loader';
 import { ArrowBackIcon } from '@/src/components/Icons';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
 import type { Package, Product } from '@/src/providers/warehouse/Types';
-
-function formatPrice(price: number) {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(price / 100);
-}
-
-function formatOrderId(id: string): string {
-  return `Order #${id.slice(0, 8).toUpperCase()}`;
-}
+import { formatOrderId, formatPrice } from '@/src/utils/formatter';
 
 const statusConfig: Record<string, { label: string; bgcolor: string; color: string }> = {
   shipped: { label: 'Shipped', bgcolor: '#E8F5E9', color: '#2E7D32' },

@@ -14,47 +14,9 @@ import {
 
 import { ArrowBackIcon } from '@/src/components/Icons';
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
-import type { Inventory, Product } from '@/src/providers/warehouse/Types';
 import Loader from '@/src/components/Loader';
-
-type PackingItem = {
-  id: string;
-  productId: string;
-  quantity: number;
-  confirmed: boolean;
-};
-
-function formatPrice(price: number) {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(price / 100);
-}
-
-function generatePackingOrder(products: Product[], inventories: Inventory[]): PackingItem[] {
-  const available = inventories
-    .filter((inventory) => inventory.quantity > 0)
-    .map((inventory) => ({
-      inventory,
-      product: products.find((entry) => entry.id === inventory.productId),
-    }))
-    .filter(
-      (entry): entry is { inventory: Inventory; product: Product } => Boolean(entry.product),
-    );
-
-  if (available.length === 0) return [];
-
-  const itemCount = Math.min(available.length, Math.floor(Math.random() * 4) + 1);
-  const shuffled = [...available].sort(() => Math.random() - 0.5);
-
-  return shuffled.slice(0, itemCount).map(({ inventory, product }) => ({
-    id: crypto.randomUUID(),
-    productId: product.id,
-    quantity: Math.min(inventory.quantity, Math.random() < 0.5 ? 1 : 2),
-    confirmed: false,
-  }));
-}
+import { formatPrice } from '@/src/utils/formatter';
+import { generatePackingOrder, PackingItem } from '@/src/utils/generator';
 
 type OrderAction = 'shipped' | 'hold' | null;
 
