@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: 'rhine-order-management', // Set the base path to the repository name for GitHub Pages deployment
+  // Configure base path for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/rhine-order-management' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/rhine-order-management' : '',
 };
 
 export default nextConfig;

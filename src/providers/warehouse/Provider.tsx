@@ -26,11 +26,12 @@ const WarehouseProvider = ({ children }: WarehouseProviderProps) => {
       });
 
       const dataPromise = (async () => {
+        const basePath = process.env.NODE_ENV === 'production' ? '/rhine-order-management' : '';
         const [ordersRes, packagesRes, inventoriesRes, productsRes] = await Promise.all([
-          fetch('/data/orders.json'),
-          fetch('/data/packages.json'),
-          fetch('/data/inventories.json'),
-          fetch('/data/products.json'),
+          fetch(`${basePath}/data/orders.json`),
+          fetch(`${basePath}/data/packages.json`),
+          fetch(`${basePath}/data/inventories.json`),
+          fetch(`${basePath}/data/products.json`),
         ]);
 
         const [ordersData, packagesData, inventoriesData, productsData] = await Promise.all([
