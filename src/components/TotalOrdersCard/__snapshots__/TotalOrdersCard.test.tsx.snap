@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`TotalOrdersCard should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-dhu5s4"
+  >
+    <div
+      class="MuiStack-root css-3pe3i2-MuiStack-root"
+    >
+      <div
+        class="MuiStack-root css-1yawawn-MuiStack-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-3ya38w-MuiTypography-root"
+        >
+          Total orders
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-y8eo7w-MuiTypography-root"
+        >
+          2
+        </p>
+        <span
+          class="MuiTypography-root MuiTypography-caption css-vmqcbb-MuiTypography-root"
+        >
+          successfully dispatched
+        </span>
+      </div>
+      <div
+        aria-hidden="true"
+        class="MuiBox-root css-1xtlxri"
+      >
+        <div
+          class="MuiBox-root css-1x10s07"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-18zdz5r-MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 6h11v9H3V6Zm12 2h3.5L20 11.5V15h-2a2.5 2.5 0 1 1-5 0H9a2.5 2.5 0 1 1-5 0H3v-2h1.05A2.5 2.5 0 0 1 6.5 9H15V8Zm-3.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm9 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -3,7 +3,8 @@
 import { Box, Stack, Typography } from '@mui/material';
 
 import type { Order } from '@/src/providers/warehouse/Types';
-import { ChevronRightIcon, OrdersBoxIcon } from './Icons';
+import { ChevronRightIcon, OrdersBoxIcon } from '../Icons';
+import { formatDate, formatOrderId } from '@/src/utils/formatter';
 
 type RecentOrdersProps = {
   orders: Order[];
@@ -14,19 +15,6 @@ const statusStyles: Record<string, { label: string; color: string }> = {
   packing: { label: 'Packing', color: '#ed6c02' },
   shipped: { label: 'Shipped', color: '#2e7d32' },
 };
-
-function formatOrderId(id: string): string {
-  return `#${id.slice(0, 8).toUpperCase()}`;
-}
-
-function formatDate(value: string): string {
-  return new Intl.DateTimeFormat('en-US', {
-    month: 'short',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: '2-digit',
-  }).format(new Date(value));
-}
 
 export default function RecentOrders({ orders }: RecentOrdersProps) {
   const recentOrders = [...orders]

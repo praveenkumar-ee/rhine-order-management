@@ -3,10 +3,10 @@
 import { Box, Stack } from '@mui/material';
 
 import useWarehouse from '@/src/providers/warehouse/useWarehouse';
-import DashboardHeader from './DashboardHeader';
-import QuickActions from './QuickActions';
-import RecentOrders from './RecentOrders';
-import TotalOrdersCard from './TotalOrdersCard';
+import DashboardHeader from '../DashboardHeader';
+import QuickActions from '../QuickActions';
+import RecentOrders from '../RecentOrders';
+import TotalOrdersCard from '../TotalOrdersCard';
 
 export default function HomeDashboard() {
   const { orders } = useWarehouse();

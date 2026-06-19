@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Box, Stack, Typography } from '@mui/material';
 import type { ElementType } from 'react';
 
-import { BellIcon, InventoryIcon, PackageIcon, TruckIcon } from './Icons';
+import { BellIcon, InventoryIcon, PackageIcon, TruckIcon } from '../Icons';
 
 type QuickAction = {
   label: string;
