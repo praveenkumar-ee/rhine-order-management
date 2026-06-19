@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import {
   Order,
@@ -61,7 +61,7 @@ const WarehouseProvider = ({ children }: WarehouseProviderProps) => {
     loadData();
   }, []);
 
-  const createOrder = (items: ShipOrderItem[], status: string) => {
+  const createOrder = useCallback((items: ShipOrderItem[], status: string) => {
     const now = new Date().toISOString();
     const orderId = crypto.randomUUID();
 
@@ -92,10 +92,10 @@ const WarehouseProvider = ({ children }: WarehouseProviderProps) => {
         };
       }),
     );
-  };
+  }, []);
 
-  const shipOrder = (items: ShipOrderItem[]) => createOrder(items, 'shipped');
-  const holdOrder = (items: ShipOrderItem[]) => createOrder(items, 'hold');
+  const shipOrder = useCallback((items: ShipOrderItem[]) => createOrder(items, 'shipped'), [createOrder]);
+  const holdOrder = useCallback((items: ShipOrderItem[]) => createOrder(items, 'hold'), [createOrder]);
 
   return (
     <WarehouseContext.Provider value={{
